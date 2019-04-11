@@ -2,10 +2,10 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
-import injectSheet, { StyleSheetThemed } from 'react-jss'
+import injectSheet from 'react-jss'
 import { Grid } from '@material-ui/core'
 
-const styles: StyleSheetThemed = (theme: any) => ({
+const styles = theme => ({
 	wrapper: {
 		marginBottom: '140px'
 	},
@@ -159,7 +159,7 @@ class ContactPage<T extends IContactPageProps> extends React.Component<T, IConta
 						<input type="hidden" name="form-name" value="contact" />
 
 						<p className="hidden">
-						    <label>So... gasworks extras...: <input name="gasworks-extras" /></label>
+						    <label className="hidden">So... gasworks extras...: <input name="gasworks-extras" className="hidden" /></label>
   						</p>
 						
 						<Grid item xs={12} sm={6}>

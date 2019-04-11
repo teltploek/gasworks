@@ -1,7 +1,7 @@
 import * as React from 'react';
-import injectSheet, { StyleSheetThemed } from 'react-jss';
+import injectSheet from 'react-jss';
 
-const styles: StyleSheetThemed = theme => ({
+const styles = theme => ({
 	pageTitle: {
 		fontFamily: theme.typography.fontRegular,
 		fontSize: '40px',
