@@ -14,7 +14,7 @@ const IndexPage = () => (
 
 	<p>1 available spot left</p>
 
-	<p>Please let us know if you’re interested in knowing more or read our FAQ for more info test</p>
+	<p>Please let us know if you’re interested in knowing more or read our FAQ for more info</p>
   </Layout>
 )
 
