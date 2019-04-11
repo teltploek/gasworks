@@ -10,6 +10,10 @@ const styles: StyleSheetThemed = (theme: any) => ({
 		marginBottom: '140px'
 	},
 
+	hidden: {
+		display: 'none'
+	},
+
 	intro: {
 		padding: '0 20px',
 		textAlign: 'center',
@@ -151,7 +155,12 @@ class ContactPage<T extends IContactPageProps> extends React.Component<T, IConta
 						<p className={this.props.classes.intro}>Tøv endelig ikke med at udfylde nedenstående, hvis du har spørgsmål, kommentarer eller på andre måder har brug for at lade os vide et eller andet 😎</p>
 					</Grid>
 					<Grid item xs={12} sm={6}>
-						<form name="contact" method="POST" action="/succes/" data-netlify="true">
+						<form name="contact" method="POST" action="/succes" netlify-honeypot="gasworks-extras" data-netlify="true">
+						<input type="hidden" name="form-name" value="contact" />
+
+						<p className="hidden">
+						    <label>So... gasworks extras...: <input name="gasworks-extras" /></label>
+  						</p>
 						
 						<Grid item xs={12} sm={6}>
 							<div className={this.props.classes.inputGroup}>
@@ -175,9 +184,6 @@ class ContactPage<T extends IContactPageProps> extends React.Component<T, IConta
 							
 								<label className={this.props.classes.label}>Besked</label>
 							</div>
-						</Grid>
-						<Grid item xs={12} sm={6}>
-						<div data-netlify-recaptcha="true"></div>
 						</Grid>
 						<Grid item xs={12} sm={6} className={this.props.classes.centered}>
 							<button className={this.props.classes.button} type="submit">Send</button>

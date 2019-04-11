@@ -2,7 +2,7 @@ import * as React from 'react';
 import injectSheet, { StyleSheetThemed } from 'react-jss';
 
 const styles: StyleSheetThemed = theme => ({
-	title: {
+	pageTitle: {
 		fontFamily: theme.typography.fontRegular,
 		fontSize: '40px',
 		fontWeight: 400,
@@ -18,7 +18,7 @@ export interface IPageTitleProps {
 const PageTitle: React.SFC<IPageTitleProps> = props => {
 
 	return (
-		<h1 className={props.classes.title}>{props.title}</h1>
+		<h1 className={props.classes.pageTitle}>{props.title}</h1>
 	);
 };
 
