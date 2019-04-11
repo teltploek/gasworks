@@ -158,8 +158,8 @@ class ContactPage<T extends IContactPageProps> extends React.Component<T, IConta
 						<form name="contact" method="POST" action="/succes" netlify-honeypot="gasworks-extras" data-netlify="true">
 						<input type="hidden" name="form-name" value="contact" />
 
-						<p className="hidden">
-						    <label className="hidden">So... gasworks extras...: <input name="gasworks-extras" className="hidden" /></label>
+						<p className={this.props.classes.hidden}>
+						    <label>So... gasworks extras...: <input name="gasworks-extras" /></label>
   						</p>
 						
 						<Grid item xs={12} sm={6}>
