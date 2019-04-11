@@ -19,7 +19,9 @@ const Theme: ITheme = {
 		gutterWidth: '20px'
 	},
 	typography: {
-		fontPrimary: "'Europa', sans-serif"
+		fontPrimary: "'Europa', sans-serif",
+		fontRegular: "'Europa-Regular', sans-serif",
+		fontBold: "'Europa-Bold', sans-serif",
 	},
 	borderRadius: {
 		main: '5px'
