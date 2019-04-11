@@ -37,7 +37,7 @@ const DirectionsPage = ({ classes }) => (
 	</div>
 
 	<div className={classes.map}>
-		<GoogleMap apiKey="AIzaSyA1fmSW6Z45b1FR5GOlzaRjMG4MF_xKUPI" lat={55.671270} lng={12.555850} />
+		<GoogleMap apiKey="AIzaSyA1fmSW6Z45b1FR5GOlzaRjMG4MF_xKUPI" title="Gasworks kontorfælleskab" lat={55.671270} lng={12.555850} />
 	</div>
   </Layout>
 )

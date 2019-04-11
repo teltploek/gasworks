@@ -41,7 +41,7 @@ module.exports = {
 		resolve: 'gatsby-plugin-web-font-loader',
 		options: {
 			typekit: {
-				id: 'nix1exl'
+				id: 'fzz0bph'
 			}
 		}
 	}
