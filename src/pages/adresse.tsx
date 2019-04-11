@@ -3,7 +3,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import GoogleMap from '../components/GoogleMap'
-import injectSheet from 'react-jss'
+import { withStyles } from '@material-ui/core/styles';
+import withRoot from '../withRoot';
 
 const styles = theme => ({
 	map: {
@@ -11,6 +12,7 @@ const styles = theme => ({
 		height: '50vh'
 	},
 	address: {
+		fontFamily: theme.typography.fontFamily,
 		fontWeight: 300,
 		textAlign: 'center',
 		marginBottom: '40px'
@@ -41,4 +43,4 @@ const DirectionsPage = ({ classes }) => (
   </Layout>
 )
 
-export default injectSheet(styles)(DirectionsPage)
+export default withRoot(withStyles(styles)(DirectionsPage))

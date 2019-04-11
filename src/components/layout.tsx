@@ -1,13 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { ThemeProvider } from 'react-jss'
-import injectSheet from 'react-jss'
-import AppShell from './AppShell'
+import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core'
 import SiteNavigation from './SiteNavigation'
 
 type ILayoutProps = {
-  children: React.ReactChildren
+  children: any
   classes: any
 }
 
@@ -32,22 +30,18 @@ const Layout = ({ children, classes }: ILayoutProps) => (
       }
     `}
     render={data => (
-      <AppShell>
-        <ThemeProvider theme={{}}>
-          <>
-            <SiteNavigation />
-            <Grid container>
-              <Grid item xs={12}>
-                <div className={classes.pageContainer}>
-                  <main>{children}</main>
-                </div>
-              </Grid>
-            </Grid>
-          </>
-        </ThemeProvider>
-      </AppShell>
+		<>
+		<SiteNavigation />
+		<Grid container>
+			<Grid item xs={12}>
+			<div className={classes.pageContainer}>
+				<main>{children}</main>
+			</div>
+			</Grid>
+		</Grid>
+		</>
     )}
   />
 )
 
-export default injectSheet(styles)(Layout)
+export default withStyles(styles)(Layout)

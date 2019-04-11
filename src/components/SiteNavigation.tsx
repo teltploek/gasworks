@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import injectSheet from 'react-jss';
+import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import { Link } from 'gatsby';
 import Burger from './Burger';
@@ -16,6 +16,7 @@ export interface ISiteNavigationState {
 
 const styles = theme => ({
 	root: {
+		fontFamily: theme.typography.fontFamily,
 		background: '#fff',
 		position: 'fixed',
 		width: '100vw',
@@ -109,7 +110,7 @@ const styles = theme => ({
 		fontFamily: theme.typography.fontPrimary,
 		fontSize: '24px',
 		lineHeight: '36px',
-		color: theme.colors.neutralBlack,
+		color: theme.palette.common.black,
 		fontWeight: 300,
 		fontStyle: 'normal',
 		margin: {
@@ -189,7 +190,7 @@ const styles = theme => ({
 		justifyContent: 'space-between',
 		margin: 0,
 		padding: 0,
-		color: theme.colors.neutralBlack
+		color: theme.palette.common.black
 	},
 
 	horizontalMenuItem: {
@@ -211,7 +212,7 @@ const styles = theme => ({
 	},
 
 	navLinkIcon: {
-		stroke: theme.colors.neutralBlack,
+		stroke: theme.palette.common.black,
 		marginRight: '10px'
 	},
 
@@ -351,4 +352,4 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<T, 
 	}
 }
 
-export default injectSheet(styles)(SiteNavigation);
+export default withStyles(styles)(SiteNavigation);

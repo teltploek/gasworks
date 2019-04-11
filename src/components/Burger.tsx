@@ -95,7 +95,7 @@ const styles: StyleSheetThemed = theme => ({
 	BurgerCaption: {
 		display: 'block',
 		whiteSpace: 'nowrap',
-		color: theme.colors.neutralBlack,
+		color: theme.palette.common.black,
 		fontFamily: '"Europa-Bold"',
 		fontSize: '12px',
 		lineHeight: 'normal'

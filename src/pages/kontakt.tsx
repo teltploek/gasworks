@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
-import injectSheet from 'react-jss'
+import { withStyles } from '@material-ui/core/styles';
+import withRoot from '../withRoot';
 import { Grid } from '@material-ui/core'
 
 const styles = theme => ({
@@ -15,6 +16,8 @@ const styles = theme => ({
 	},
 
 	intro: {
+		fontFamily: theme.typography.fontFamily,
+		fontWeight: 100,
 		padding: '0 20px',
 		textAlign: 'center',
 		marginBottom: '60px'
@@ -196,5 +199,5 @@ class ContactPage<T extends IContactPageProps> extends React.Component<T, IConta
 	}
 }
 
-export default injectSheet(styles)(ContactPage)
+export default withRoot(withStyles(styles)(ContactPage))
 

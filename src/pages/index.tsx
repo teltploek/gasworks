@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
-import injectSheet from 'react-jss'
+import { withStyles } from '@material-ui/core/styles';
+import withRoot from '../withRoot';
 
 const styles = theme => ({
 	contentFrame: {
@@ -11,7 +12,9 @@ const styles = theme => ({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		textAlign: 'center'
+		textAlign: 'center',
+		fontFamily: theme.typography.fontFamily,
+		fontWeight: 100
 	}
 })
 
@@ -33,4 +36,4 @@ const IndexPage = ({ classes }) => (
   </Layout>
 )
 
-export default injectSheet(styles)(IndexPage)
+export default withRoot(withStyles(styles)(IndexPage))

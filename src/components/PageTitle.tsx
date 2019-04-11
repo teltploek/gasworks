@@ -1,9 +1,9 @@
 import * as React from 'react';
-import injectSheet from 'react-jss';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
 	pageTitle: {
-		fontFamily: theme.typography.fontRegular,
+		fontFamily: theme.typography.fontFamily,
 		fontSize: '40px',
 		fontWeight: 400,
 		textAlign: 'center'
@@ -16,10 +16,9 @@ export interface IPageTitleProps {
 }
 
 const PageTitle: React.SFC<IPageTitleProps> = props => {
-
 	return (
 		<h1 className={props.classes.pageTitle}>{props.title}</h1>
 	);
 };
 
-export default injectSheet(styles)(PageTitle);
+export default withStyles(styles)(PageTitle);
