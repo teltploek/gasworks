@@ -252,7 +252,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<T, 
 	}
 
 	public render() {
-		const headerClassName = classNames(
+		const navClassName = classNames(
 			this.props.classes.root,
 			{
 				[this.props.classes.navIsOpen]: this.state.isOpen
@@ -261,7 +261,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<T, 
 
 		return (
 			<React.Fragment>
-				<header className={headerClassName}>
+				<nav className={navClassName}>
 					<div className={this.props.classes.navHead}>
 						<a className={this.props.classes.logoWrapper} href={`/`}>
 							<svg width="67px" height="65px" viewBox="0 0 67 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -345,7 +345,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<T, 
 							</Grid>
 						</div>
 					</nav>
-				</header>
+				</nav>
 			</React.Fragment>
 		);
 	}

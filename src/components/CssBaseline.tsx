@@ -15,8 +15,9 @@ const styles: StyleSheetThemed = (theme: any) => ({
     },
     body: {
       margin: 0, // Remove the margin in all browsers.
-      backgroundColor: theme.colors.neutralGrey5,
+      backgroundColor: theme.colors.neutralWhite,
 	  fontFamily: theme.typography.fontPrimary,
+	  fontWeight: 100,
 	  
       '@media print': {
         // Save printer ink.

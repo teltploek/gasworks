@@ -7,7 +7,6 @@ import injectSheet from 'react-jss'
 
 const styles = theme => ({
 	map: {
-		margin: '0 -40px',
 		width: '100vw',
 		height: '50vh'
 	},
