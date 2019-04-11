@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby';
 import Burger from './Burger';
 //import LunrSearch from './LunrSearch';

@@ -4,14 +4,6 @@ import {
 
 // Create a theme with Gatsby brand colors. You can choose your own
 const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: '#663399'
-        },
-        secondary: {
-            main: '#ffb238'
-        }
-    },
     typography: {
 		useNextVariants: true,
 		// Use the system font instead of the default Roboto font.

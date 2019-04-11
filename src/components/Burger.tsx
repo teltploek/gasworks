@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import injectSheet, { StyleSheetThemed } from 'react-jss';
+import { withStyles } from '@material-ui/core/styles';
 
 /*
  * This atom is deliberately left out of /src/index.ts because it's not
@@ -8,7 +8,7 @@ import injectSheet, { StyleSheetThemed } from 'react-jss';
  * composition (such as in the Header)
  * */
 
-const styles: StyleSheetThemed = theme => ({
+const styles = theme => ({
 	root: {
 		background: 0,
 		border: 0,
@@ -161,4 +161,4 @@ const BrugerMenuButton: React.SFC<IBurgerMenuButtonProps> = props => {
 	);
 };
 
-export default injectSheet(styles)(BrugerMenuButton);
+export default withStyles(styles)(BrugerMenuButton);

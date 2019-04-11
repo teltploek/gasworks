@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core'
 import SiteNavigation from './SiteNavigation'
+import withRoot from "../withRoot";
 
 type ILayoutProps = {
   children: any
@@ -44,4 +45,5 @@ const Layout = ({ children, classes }: ILayoutProps) => (
   />
 )
 
-export default withStyles(styles)(Layout)
+export default withRoot(withStyles(styles, { withTheme: true })(Layout));
+
