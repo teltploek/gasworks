@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   '@global': {
     body: {
-      background: theme.palette.common.white,
+      background: `${theme.palette.common.white} !important`,
       fontFamily: theme.typography.fontFamily,
     },
     '.wf-loading *': {
