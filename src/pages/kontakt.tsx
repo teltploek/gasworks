@@ -4,8 +4,9 @@ import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import { Grid } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
+import theme from '../theme'
 
-const styles = theme => ({
+const styles = {
   wrapper: {
     marginBottom: '140px',
   },
@@ -110,7 +111,7 @@ const styles = theme => ({
       color: '#000',
     },
   },
-})
+}
 
 export interface IContactPageProps {
   classes: any

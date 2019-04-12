@@ -6,7 +6,7 @@ title: "FAQ"
 
 ### Får jeg egen nøgle?
 
-Ja, alle lejere vil have egen nøgle og kan komme og gå som de vil.
+Ja, alle lejere har egen nøgle og kan komme og gå som de vil.
 
 ### Hvordan kommunikerer I i det daglige?
 

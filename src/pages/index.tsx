@@ -3,8 +3,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import { withStyles } from '@material-ui/core/styles';
+import theme from '../theme'
 
-const styles = theme => ({
+const styles = {
 	contentFrame: {
 		padding: '40px',
 		display: 'flex',
@@ -15,7 +16,7 @@ const styles = theme => ({
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 100
 	}
-})
+}
 
 const IndexPage = ({ classes }) => (
   <Layout>
@@ -24,7 +25,7 @@ const IndexPage = ({ classes }) => (
 	<PageTitle title="Velkommen" />
 	
 	<div className={classes.contentFrame}>
-		<p>Venligt indstillet, åbensindet, prisbevidst kontorfælleskab i hjertet af København</p>
+		<p>Venligt indstillet, åbensindet, kontorfælleskab til en overkommelig pris i hjertet af København</p>
 
 		<p>Vi har i øjeblikket</p>
 

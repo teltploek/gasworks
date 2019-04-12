@@ -4,8 +4,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import { withStyles } from '@material-ui/core/styles'
+import theme from '../theme'
 
-const styles = theme => ({
+const styles = {
   '@global': {
     p: {
       margin: 0,
@@ -42,7 +43,7 @@ const styles = theme => ({
       maxWidth: '50vw',
     },
   },
-})
+}
 
 const ContentPage = ({ data, classes }) => (
   <Layout>

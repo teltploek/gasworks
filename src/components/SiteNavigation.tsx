@@ -156,7 +156,7 @@ const styles = theme => ({
   appearItem: {
     opacity: 0,
     transform: 'translateY(30px)',
-    transition: 'all .5s ease-in-out',
+    transition: 'all .5s ease-in-out !important',
 
     '$navIsOpen &': {
       opacity: 1,
@@ -164,23 +164,23 @@ const styles = theme => ({
     },
 
     '&:nth-child(2)': {
-      transitionDelay: '.1s',
+      transitionDelay: '.1s !important',
     },
 
     '&:nth-child(3)': {
-      transitionDelay: '.15s',
+      transitionDelay: '.15s !important',
     },
 
     '&:nth-child(4)': {
-      transitionDelay: '.2s',
+      transitionDelay: '.2s !important',
     },
 
     '&:nth-child(5)': {
-      transitionDelay: '.25s',
+      transitionDelay: '.25s !important',
     },
 
     '&:nth-child(6)': {
-      transitionDelay: '.3s',
+      transitionDelay: '.3s !important',
     },
   },
 
