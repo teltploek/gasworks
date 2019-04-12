@@ -1,9 +1,6 @@
 // See https://github.com/mui-org/material-ui/tree/master/examples/gatsby
-import { SheetsRegistry } from 'jss'
-import {
-  createMuiTheme,
-  createGenerateClassName,
-} from '@material-ui/core/styles'
+import { SheetsRegistry } from 'react-jss'
+import createGenerateClassName from './utils/createGenerateClassName'
 import theme from './theme'
 
 // A theme with custom primary and secondary color.

@@ -2,12 +2,6 @@ import classNames from 'classnames';
 import * as React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-/*
- * This atom is deliberately left out of /src/index.ts because it's not
- * considered to be a public atom - it's only intended to be used in a
- * composition (such as in the Header)
- * */
-
 const styles = theme => ({
 	root: {
 		background: 0,
@@ -161,4 +155,4 @@ const BrugerMenuButton: React.SFC<IBurgerMenuButtonProps> = props => {
 	);
 };
 
-export default withStyles(styles)(BrugerMenuButton);
+export default withStyles(styles, { withTheme: true })(BrugerMenuButton);

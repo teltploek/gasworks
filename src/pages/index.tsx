@@ -3,7 +3,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import { withStyles } from '@material-ui/core/styles';
-import withRoot from '../withRoot';
 
 const styles = theme => ({
 	contentFrame: {
@@ -36,4 +35,4 @@ const IndexPage = ({ classes }) => (
   </Layout>
 )
 
-export default withRoot(withStyles(styles)(IndexPage))
+export default withStyles(styles, { withTheme: true })(IndexPage);

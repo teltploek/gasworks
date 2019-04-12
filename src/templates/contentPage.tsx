@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import { withStyles } from '@material-ui/core/styles'
-import withRoot from '../withRoot'
 
 const styles = theme => ({
   '@global': {
@@ -34,10 +33,10 @@ const styles = theme => ({
     },
   },
   contentWrapper: {
-	fontFamily: theme.typography.fontFamily,
+    fontFamily: theme.typography.fontFamily,
     margin: '0 auto 140px auto',
-	display: 'flex',
-	flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
 
     [theme.breakpoints.up('sm')]: {
       maxWidth: '50vw',
@@ -63,7 +62,7 @@ const ContentPage = ({ data, classes }) => (
   </Layout>
 )
 
-export default withRoot(withStyles(styles)(ContentPage))
+export default withStyles(styles, { withTheme: true })(ContentPage)
 
 export const query = graphql`
   query($slug: String!) {

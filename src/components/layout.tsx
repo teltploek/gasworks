@@ -35,9 +35,9 @@ const Layout = ({ children, classes }: ILayoutProps) => (
 		<SiteNavigation />
 		<Grid container>
 			<Grid item xs={12}>
-			<div className={classes.pageContainer}>
-				<main>{children}</main>
-			</div>
+				<div className={classes.pageContainer}>
+					<main>{children}</main>
+				</div>
 			</Grid>
 		</Grid>
 		</>
@@ -45,5 +45,5 @@ const Layout = ({ children, classes }: ILayoutProps) => (
   />
 )
 
-export default withRoot(withStyles(styles, { withTheme: true })(Layout));
+export default withRoot(withStyles(styles)(Layout));
 

@@ -21,4 +21,4 @@ const PageTitle: React.SFC<IPageTitleProps> = props => {
 	);
 };
 
-export default withStyles(styles)(PageTitle);
+export default withStyles(styles, { withTheme: true })(PageTitle);
