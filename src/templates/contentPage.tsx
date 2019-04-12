@@ -31,7 +31,12 @@ const styles = theme => ({
       fontWeight: 300,
       padding: '20px',
 	  margin: '0 auto',
-	  maxWidth: '50vw'
+
+	  [theme.breakpoints.up('sm')]: {
+		maxWidth: '590px',
+		textAlign: 'center',
+		padding: '40px 20px'
+	  }
     },
   },
   contentWrapper: {

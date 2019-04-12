@@ -16,26 +16,43 @@ const styles = theme => ({
     fontFamily: theme.typography.fontFamily,
     fontWeight: 100,
   },
+  videoWrapper: {
+    padding: '40px 20px',
+  },
+  videoFrame: {
+	boxShadow: '6px 6px 5px 0px rgba(85,85,85,0.42)',
+
+	[theme.breakpoints.up('sm')]: {
+		width: '600px',
+		height: '320px'
+	}
+  },
 })
 
 const IndexPage = ({ classes }) => (
   <Layout>
     <SEO
-      title="Gasworks, kontorfælleskab på Vesterbro"
-      keywords={[`kontorfælleskab`, `egen plads`, `eget skrivebord`]}
+      title="Gasworks, kontorfællesskab på Vesterbro"
+      keywords={[`kontorfællesskab`, `egen plads`, `eget skrivebord`]}
     />
 
     <PageTitle title="Velkommen til Gasworks" />
 
     <div className={classes.contentFrame}>
       <p>
-        Venligt indstillet, åbensindet, kontorfælleskab til en overkommelig pris
-        i hjertet af København
+        Din egen plads i kontorfællesskab til en overkommelig pris i hjertet af
+        København
       </p>
 
-      <p>Vi har i øjeblikket</p>
-
-      <p>1 ledig plads tilbage</p>
+      <div className={classes.videoWrapper}>
+        <iframe
+          src="https://www.youtube.com/embed/YHmPLkkpgR4"
+          className={classes.videoFrame}
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
 
       <p>
         Lad os endelig høre fra dig, hvis du er interesseret i at vide mere. Læs

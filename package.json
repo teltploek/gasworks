@@ -1,7 +1,7 @@
 {
   "name": "gasworks-website",
   "private": true,
-  "description": "Venligt indstillet, åbensindet, prisbevidst kontorfælleskab i hjertet af København",
+  "description": "Venligt indstillet, åbensindet, prisbevidst kontorfællesskab i hjertet af København",
   "version": "0.1.0",
   "author": "Brian Frisch <brian@busycph.dk>",
   "dependencies": {
