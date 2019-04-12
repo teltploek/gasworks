@@ -531,10 +531,10 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                     >
                       <Link
                         className={this.props.classes.menuItemLink}
-                        to={`/kontakt`}
+                        to={`/faq`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
                       >
-                        Kontakt
+                        FAQ
                       </Link>
                     </li>
                     <li
@@ -544,10 +544,10 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                     >
                       <Link
                         className={this.props.classes.menuItemLink}
-                        to={`/faq`}
+                        to={`/kontakt`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
                       >
-                        FAQ
+                        Kontakt
                       </Link>
                     </li>
                     {/* <li className={`${this.props.classes.menuItem} ${this.props.classes.appearItem}`}>

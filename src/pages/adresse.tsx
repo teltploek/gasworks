@@ -3,10 +3,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import GoogleMap from '../components/GoogleMap'
+import withRoot from '../utils/withRoot'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../theme'
 
-const styles = {
+const styles = theme => ({
   map: {
     width: '100vw',
     height: '50vh',
@@ -21,7 +21,7 @@ const styles = {
     marginTop: 0,
     marginBottom: 0,
   },
-}
+});
 
 const DirectionsPage = ({ classes }) => (
   <Layout>
@@ -65,4 +65,4 @@ const DirectionsPage = ({ classes }) => (
   </Layout>
 )
 
-export default withStyles(styles)(DirectionsPage)
+export default withRoot(withStyles(styles, { withTheme: true })(DirectionsPage))

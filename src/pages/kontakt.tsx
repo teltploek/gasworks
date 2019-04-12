@@ -3,10 +3,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
 import { Grid } from '@material-ui/core'
+import withRoot from '../utils/withRoot'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../theme'
 
-const styles = {
+const styles = theme => ({
   wrapper: {
     marginBottom: '140px',
   },
@@ -111,7 +111,7 @@ const styles = {
       color: '#000',
     },
   },
-}
+});
 
 export interface IContactPageProps {
   classes: any
@@ -245,4 +245,4 @@ class ContactPage<T extends IContactPageProps> extends React.Component<
   }
 }
 
-export default withStyles(styles, { withTheme: true })(ContactPage)
+export default withRoot(withStyles(styles, { withTheme: true })(ContactPage))

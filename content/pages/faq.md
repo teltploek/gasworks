@@ -38,7 +38,7 @@ Desværre ikke. De af os der har Fitness World abonnement har taget bad i filial
 
 ### Hvordan opkræves lejen?
 
-Du får en e-mail med opkrævning for tre måneder ad gangen. De fremsendes ved begyndelsen af din tilknytning til kontorfælleskabet eller når den foregående lejeperiode nærmer sig sit ophør.
+Du får en e-mail med opkrævning for tre måneder ad gangen. De fremsendes ved begyndelsen af din tilknytning til kontorfællesskabet eller når den foregående lejeperiode nærmer sig sit ophør.
 
 ### Er der kaffe og the?
 

@@ -155,4 +155,4 @@ const BrugerMenuButton: React.SFC<IBurgerMenuButtonProps> = props => {
 	);
 };
 
-export default withStyles(styles, { withTheme: true })(BrugerMenuButton);
+export default withStyles(styles)(BrugerMenuButton);

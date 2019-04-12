@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gasworks, kontorfælleskab på Vesterbro`,
-    description: `Venligt indstillet, åbensindet, prisbevidst kontorfælleskab i hjertet af København`,
+    title: `Gasworks, kontorfællesskab på Vesterbro`,
+    description: `Venligt indstillet, åbensindet, kontorfælleskab til en overkommelig pris i hjertet af København`,
     author: `BUSY ApS`,
   },
   plugins: [

@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageTitle from '../components/PageTitle'
+import withRoot from '../utils/withRoot'
 import { withStyles } from '@material-ui/core/styles'
-import theme from '../theme'
 
-const styles = {
+const styles = theme => ({
   '@global': {
     p: {
       margin: 0,
@@ -30,7 +30,8 @@ const styles = {
       fontFamily: theme.typography.fontFamily,
       fontWeight: 300,
       padding: '20px',
-      margin: 0,
+	  margin: '0 auto',
+	  maxWidth: '50vw'
     },
   },
   contentWrapper: {
@@ -43,7 +44,7 @@ const styles = {
       maxWidth: '50vw',
     },
   },
-}
+});
 
 const ContentPage = ({ data, classes }) => (
   <Layout>
@@ -63,7 +64,7 @@ const ContentPage = ({ data, classes }) => (
   </Layout>
 )
 
-export default withStyles(styles, { withTheme: true })(ContentPage)
+export default withRoot(withStyles(styles, { withTheme: true })(ContentPage))
 
 export const query = graphql`
   query($slug: String!) {
