@@ -91,7 +91,7 @@ const styles = {
     padding: '12px 40px',
     textAlign: 'center',
     color: '#fff',
-    transition: '0.2s ease all',
+    transition: '0.2s ease all !important',
     margin: '0 auto',
     display: 'inline-block',
 

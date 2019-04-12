@@ -34,7 +34,12 @@ const styles = {
     padding: 0,
     background: '#fff',
     height: 'calc(100vh - 100px)',
-    margin: 0,
+	margin: 0,
+	
+	[theme.breakpoints.up('sm')]: {
+		marginTop: '200px',
+		height: 'calc(100vh - 200px)',
+	}
   },
 }
 

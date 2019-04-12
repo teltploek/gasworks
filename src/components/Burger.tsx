@@ -28,9 +28,9 @@ const styles = theme => ({
 		width: '24px',
 		height: '16px',
 		position: 'relative',
-		transform: 'rotate(0deg)',
-		transition: '.5s ease-in-out',
-		marginBottom: '17px',
+		transform: 'scale(1.5) rotate(0deg)',
+		transition: '.5s ease-in-out !important',
+		marginBottom: '18px',
 
 		[theme.breakpoints.up('sm')]: {
 			margin: {
@@ -48,7 +48,7 @@ const styles = theme => ({
 		opacity: 1,
 		left: 0,
 		transform: 'rotate(0deg)',
-		transition: '.25s ease-in-out'
+		transition: '.25s ease-in-out !important'
 	},
 
 	BurgerIconBar1: {
@@ -91,7 +91,7 @@ const styles = theme => ({
 		whiteSpace: 'nowrap',
 		color: theme.palette.common.black,
 		fontFamily: '"Europa-Bold"',
-		fontSize: '12px',
+		fontSize: '9px',
 		lineHeight: 'normal'
 	},
 

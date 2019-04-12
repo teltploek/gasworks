@@ -20,7 +20,6 @@ function safePrefix(classNamePrefix) {
 export default function createGenerateClassName(options = {}) {
   const {
     dangerouslyUseGlobalCSS = false,
-    productionPrefix = 'jss',
     seed = '',
   } = options
   let ruleCounter = 0

@@ -53,7 +53,7 @@ const ContentPage = ({ data, classes }) => (
     />
 
     <PageTitle title={data.markdownRemark.frontmatter.title} />
-
+	
     <div
       className={classes.contentWrapper}
       dangerouslySetInnerHTML={{

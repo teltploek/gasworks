@@ -58,8 +58,8 @@ const DirectionsPage = ({ classes }) => (
       <GoogleMap
         apiKey="AIzaSyA1fmSW6Z45b1FR5GOlzaRjMG4MF_xKUPI"
         title="Gasworks kontorfælleskab"
-        lat={55.67127}
-        lng={12.55585}
+        lat={55.671268}
+        lng={12.555850}
       />
     </div>
   </Layout>
