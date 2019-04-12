@@ -8,6 +8,7 @@
     "@material-ui/core": "^3.9.2",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
+    "gatsby-plugin-google-analytics": "^2.0.18",
     "gatsby-plugin-manifest": "^2.0.25",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.11",
@@ -18,12 +19,12 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
+    "jss": "^9.8.7",
+    "mdi-material-ui": "^5.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "jss": "^9.8.7",
-    "react-jss": "^8.6.1",
-    "mdi-material-ui": "^5.9.0"
+    "react-jss": "^8.6.1"
   },
   "devDependencies": {
     "prettier": "^1.16.4"

@@ -1,5 +1,6 @@
 ---
 title: "FAQ"
+description: "Ofte stillede spørgsmål"
 ---
 
 <div class="content-wrapper">

@@ -8,6 +8,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import officeImage from '../images/office/office-08.jpg'
 
 type ISEOProps = {
   title: string
@@ -79,7 +80,11 @@ function SEO({
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
+		},
+		{
+			name: `og:image`,
+			content: officeImage
+		}
       ]
         .concat(
           keywords.length > 0

@@ -49,7 +49,7 @@ const styles = theme => ({
 const ContentPage = ({ data, classes }) => (
   <Layout>
     <SEO
-      title="Billeder fra kontoret - Gasworks, kontorfælleskab på Vesterbro"
+      title={`${data.markdownRemark.frontmatter.description} - Gasworks, kontorfælleskab på Vesterbro`}
       keywords={[`kontorfælleskab`, `egen plads`, `eget skrivebord`]}
     />
 
@@ -71,7 +71,8 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
+		title
+		description
       }
     }
   }

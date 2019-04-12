@@ -290,7 +290,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
       <React.Fragment>
         <nav className={navClassName}>
           <div className={this.props.classes.navHead}>
-            <a className={this.props.classes.logoWrapper} href={`/`}>
+            <Link className={this.props.classes.logoWrapper} to={`/`}>
               <svg
                 width="222px"
                 height="265px"
@@ -474,7 +474,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                   </g>
                 </g>
               </svg>
-            </a>
+            </Link>
 
             <nav id="mainNavigation" role="navigation">
               <ul className={this.props.classes.horizontalMenu}>

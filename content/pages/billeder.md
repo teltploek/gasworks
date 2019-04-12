@@ -1,5 +1,6 @@
 ---
 title: "Billeder"
+description: "Billeder fra kontoret"
 ---
 
 ![image](../../src/images/office/office-01.jpg)

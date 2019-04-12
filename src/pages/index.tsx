@@ -25,7 +25,7 @@ const IndexPage = ({ classes }) => (
       keywords={[`kontorfælleskab`, `egen plads`, `eget skrivebord`]}
     />
 
-    <PageTitle title="Velkommen" />
+    <PageTitle title="Velkommen til Gasworks" />
 
     <div className={classes.contentFrame}>
       <p>
