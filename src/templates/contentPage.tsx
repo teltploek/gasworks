@@ -54,8 +54,8 @@ const styles = theme => ({
 const ContentPage = ({ data, classes }) => (
   <Layout>
     <SEO
-      title={`${data.markdownRemark.frontmatter.description} - Gasworks, kontorfælleskab på Vesterbro`}
-      keywords={[`kontorfælleskab`, `egen plads`, `eget skrivebord`]}
+      title={`${data.markdownRemark.frontmatter.description} - Gasworks, kontorfællesskab på Vesterbro`}
+      keywords={[`kontorfællesskab`, `egen plads`, `eget skrivebord`]}
     />
 
     <PageTitle title={data.markdownRemark.frontmatter.title} />

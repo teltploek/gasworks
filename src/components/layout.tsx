@@ -6,25 +6,19 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   '@global': {
     body: {
-      background: `${theme.palette.common.white} !important`,
+      background: `${theme.palette.common.white}`,
       fontFamily: theme.typography.fontFamily,
-    },
-    '.wf-loading *': {
-      opacity: 0,
-    },
-    '.wf-active *, .wf-inactive *': {
-      transition: 'opacity .5s ease-out',
-    },
+    }
   },
   pageContainer: {
     padding: 0,
     background: '#fff',
-    height: 'calc(100vh - 100px)',
+    paddingBottom: '100px',
     margin: 0,
 
     [theme.breakpoints.up('sm')]: {
       marginTop: '200px',
-      height: 'calc(100vh - 200px)',
+      height: 'auto',
     },
   },
 })

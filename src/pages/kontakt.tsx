@@ -91,7 +91,7 @@ const styles = theme => ({
     padding: '12px 40px',
     textAlign: 'center',
     color: '#fff',
-    transition: '0.2s ease all !important',
+    transition: '0.2s ease all',
     margin: '0 auto',
     display: 'inline-block',
 
@@ -153,8 +153,8 @@ class ContactPage<T extends IContactPageProps> extends React.Component<
     return (
       <Layout>
         <SEO
-          title="Kontakt os - Gasworks, kontorfælleskab på Vesterbro"
-          keywords={[`kontorfælleskab`, `egen plads`, `eget skrivebord`]}
+          title="Kontakt os - Gasworks, kontorfællesskab på Vesterbro"
+          keywords={[`kontorfællesskab`, `egen plads`, `eget skrivebord`]}
         />
 
         <PageTitle title="Kontakt" />

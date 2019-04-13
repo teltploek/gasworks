@@ -174,7 +174,7 @@ const styles = theme => ({
   appearItem: {
     opacity: 0,
     transform: 'translateY(30px)',
-    transition: 'all .5s ease-in-out !important',
+    transition: 'all .5s ease-in-out',
 
     '$navIsOpen &': {
       opacity: 1,
@@ -182,23 +182,23 @@ const styles = theme => ({
     },
 
     '&:nth-child(2)': {
-      transitionDelay: '.1s !important',
+      transitionDelay: '.1s',
     },
 
     '&:nth-child(3)': {
-      transitionDelay: '.15s !important',
+      transitionDelay: '.15s',
     },
 
     '&:nth-child(4)': {
-      transitionDelay: '.2s !important',
+      transitionDelay: '.2s',
     },
 
     '&:nth-child(5)': {
-      transitionDelay: '.25s !important',
+      transitionDelay: '.25s',
     },
 
     '&:nth-child(6)': {
-      transitionDelay: '.3s !important',
+      transitionDelay: '.3s',
     },
 
     [theme.breakpoints.up('sm')]: {

@@ -9,11 +9,12 @@ const styles = theme => ({
 		display: 'flex',
 		padding: 0,
 		cursor: 'pointer',
-		height: '30px',
+		
 		width: '30px',
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'start',
+		zIndex: 1001,
 
 		[theme.breakpoints.up('sm')]: {
 			width: '90px',
@@ -29,7 +30,7 @@ const styles = theme => ({
 		height: '16px',
 		position: 'relative',
 		transform: 'scale(1.5) rotate(0deg)',
-		transition: '.5s ease-in-out !important',
+		transition: '.5s ease-in-out',
 		marginBottom: '18px',
 
 		[theme.breakpoints.up('sm')]: {
@@ -48,7 +49,7 @@ const styles = theme => ({
 		opacity: 1,
 		left: 0,
 		transform: 'rotate(0deg)',
-		transition: '.25s ease-in-out !important'
+		transition: '.25s ease-in-out'
 	},
 
 	BurgerIconBar1: {
@@ -90,7 +91,7 @@ const styles = theme => ({
 		display: 'block',
 		whiteSpace: 'nowrap',
 		color: theme.palette.common.black,
-		fontFamily: '"Europa-Bold"',
+		fontFamily: theme.typography.fontFamily,
 		fontSize: '9px',
 		lineHeight: 'normal'
 	},

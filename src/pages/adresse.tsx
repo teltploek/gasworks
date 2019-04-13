@@ -26,8 +26,8 @@ const styles = theme => ({
 const DirectionsPage = ({ classes }) => (
   <Layout>
     <SEO
-      title="Find os - Gasworks, kontorfælleskab på Vesterbro"
-      keywords={[`kontorfælleskab`, `egen plads`, `eget skrivebord`]}
+      title="Find os - Gasworks, kontorfællesskab på Vesterbro"
+      keywords={[`kontorfællesskab`, `egen plads`, `eget skrivebord`]}
     />
 
     <PageTitle title="Adresse" />
@@ -38,7 +38,7 @@ const DirectionsPage = ({ classes }) => (
       itemType="https://schema.org/LocalBusiness"
     >
       <p itemProp="name" className={classes.addressLine}>
-        Gasworks kontorfælleskab
+        Gasworks kontorfællesskab
       </p>
       <div
         className={classes.addressLine}
@@ -57,7 +57,7 @@ const DirectionsPage = ({ classes }) => (
     <div className={classes.map}>
       <GoogleMap
         apiKey="AIzaSyA1fmSW6Z45b1FR5GOlzaRjMG4MF_xKUPI"
-        title="Gasworks kontorfælleskab"
+        title="Gasworks kontorfællesskab"
         lat={55.671268}
         lng={12.555850}
       />
