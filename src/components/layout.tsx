@@ -6,24 +6,25 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   '@global': {
     body: {
-      background: `${theme.palette.common.white}`,
+      background: `${theme.palette.common.white} !important`,
       fontFamily: theme.typography.fontFamily,
     }
   },
   pageContainer: {
     padding: 0,
-    background: '#fff',
+    background: 'transparent',
     paddingBottom: '100px',
     margin: 0,
 
     [theme.breakpoints.up('sm')]: {
       marginTop: '200px',
-      height: 'auto',
+	  height: 'auto',
+	  paddingBottom: 0
     },
   },
 })
 
-class Page extends React.Component {
+class Layout extends React.Component {
   render() {
     const { children, classes } = this.props
     return (
@@ -41,4 +42,4 @@ class Page extends React.Component {
   }
 }
 
-export default withStyles(styles)(Page)
+export default withStyles(styles)(Layout)

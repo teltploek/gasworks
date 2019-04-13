@@ -6,6 +6,7 @@ import PageTitle from '../components/PageTitle'
 import withRoot from '../utils/withRoot'
 import { withStyles } from '@material-ui/core/styles'
 
+
 const styles = theme => ({
   contentFrame: {
     padding: '40px',
@@ -31,7 +32,7 @@ const styles = theme => ({
 		width: '600px',
 		height: '320px'
 	}
-  },
+  }
 })
 
 const IndexPage = ({ classes }) => (

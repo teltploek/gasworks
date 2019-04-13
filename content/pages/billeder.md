@@ -5,7 +5,7 @@ description: "Billeder fra kontoret"
 
 ![image](../../src/images/office/office-01.jpg)
 
-<p class="image__caption">Vi sidder alle ved hævesænkeborde i et åbent lokale på ca. 120m2.</p>
+<p class="image__caption">Vi sidder alle ved hæve-sænkeborde i et åbent lokale på ca. 120m2.</p>
 
 ![image](../../src/images/office/office-02.jpg)
 
@@ -33,7 +33,7 @@ description: "Billeder fra kontoret"
 
 ![image](../../src/images/office/office-06.jpg)
 
-<p class="image__caption">Detaljerne i kontorets udsmykning afslører en hvis overvægt i nørderi og popkultur.</p>
+<p class="image__caption">Detaljerne i kontorets udsmykning afslører en overvægt i nørderi og popkultur.</p>
 
 ![image](../../src/images/office/office-07.jpg)
 
@@ -41,4 +41,4 @@ description: "Billeder fra kontoret"
 
 ![image](../../src/images/office/office-10.jpg)
 
-<p class="image__caption">Indgangen fra Gasværksvej emmer af Vesterbro, som vi alle kender og holder af.</p>
+<p class="image__caption">Indgangen fra Gasværksvej til den trygge aflukkede gård  emmer af Vesterbro.</p>
