@@ -15,7 +15,7 @@ Vi har oprettet et [Slack](https://slack.com/)-kanal til formålet. Det er her, 
 
 ### Skal jeg medbringe min egen kaffe?
 
-Du må gerne, men du behøver ikke. Kaffe, te og vand er inkluderet for dig og dine gæster, når du er betalende lejer.
+Du må gerne, men du behøver ikke. Kaffe, the og vand er inkluderet for dig og dine gæster, når du er betalende lejer.
 		
 ### Hvordan foregår rengøring?
 
@@ -35,7 +35,7 @@ Der er et tv med en tilhørende Chromecast.
 
 ### Er der bad?
 
-Desværre ikke. De af os der har Fitness World abonnement har taget bad i filialen meget tæt på (link)
+Desværre ikke. De af os der har Fitness World abonnement har taget bad i [filialen meget tæt på](https://goo.gl/maps/qkN3JX8WR73Nq25x5).
 
 ### Hvordan opkræves lejen?
 
