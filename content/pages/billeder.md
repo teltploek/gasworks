@@ -17,7 +17,7 @@ description: "Billeder fra kontoret"
 
 ![image](../../src/images/office/office-08.jpg)
 
-<p class="image__caption">Huset ligger godt gemt og beskyttet i baggården. Der er cykelparkering og du alle lejere har egen nøgle og kan komme og gå som vedkommende ønsker.</p>
+<p class="image__caption">Huset ligger godt gemt og beskyttet i baggården. Der er cykelparkering og alle lejere har egen nøgle til både port og kontor, og kan komme og gå som vedkommende ønsker.</p>
 
 ![image](../../src/images/office/office-09.jpg)
 
@@ -41,4 +41,4 @@ description: "Billeder fra kontoret"
 
 ![image](../../src/images/office/office-10.jpg)
 
-<p class="image__caption">Indgangen fra Gasværksvej til den trygge aflukkede gård  emmer af Vesterbro.</p>
+<p class="image__caption">Indgangen fra Gasværksvej til den trygge aflukkede gård emmer af Vesterbro.</p>

@@ -62,7 +62,7 @@ const IndexPage = ({ classes }) => (
 
       <p>
         Lad os endelig høre fra dig, hvis du er interesseret i at vide mere. Læs
-        vores <Link to={`faq`}>FAQ</Link> for mere info eller kom forbi til at kop kaffe
+        vores <Link to={`faq`}>FAQ</Link> for mere info eller kom forbi til en kop kaffe.
       </p>
     </div>
   </Layout>
