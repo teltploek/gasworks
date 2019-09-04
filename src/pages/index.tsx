@@ -63,7 +63,7 @@ const IndexPage = ({ classes }) => (
     	<PageTitle title="Velkommen til Gasworks" />
 
       <p>
-        Din egen plads i kontorfællesskab til en overkommelig pris i hjertet af
+        Din egen plads i kontorfællesskab til en overkommelig pris i ❤️af
         København
       </p>
 
@@ -89,7 +89,7 @@ const IndexPage = ({ classes }) => (
 
       <p>
         Lad os endelig <Link className={classes.link} to={`kontakt`}>høre fra dig</Link>, hvis du er interesseret i at vide mere.</p>
-		<p>Du kan også læse mere på vores <Link className={classes.link} to={`faq`}>FAQ</Link> for mere info eller kom forbi til en kop kaffe.
+		<p>Du kan også læse mere på vores <Link className={classes.link} to={`faq`}>FAQ</Link> for mere info eller kom forbi til ☕️
       </p>
     </div>
   </Layout>
