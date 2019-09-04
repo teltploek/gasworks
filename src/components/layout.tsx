@@ -47,11 +47,11 @@ const styles = theme => ({
 
 const Layout = ({ children, classes }) => (
 	<React.Fragment>
-		{Boolean(location) && Boolean(location.pathname === '/') && (
+		{Boolean(typeof location !== 'undefined') && Boolean(location) && Boolean(location.pathname === '/') && (
 			<div className={classes.wallpaperBg} />
 		)}
 		<div className={classes.content}>
-			<SiteNavigation bright={Boolean(location) && Boolean(location.pathname === '/')} />
+			<SiteNavigation bright={Boolean(typeof location !== 'undefined') && Boolean(location) && Boolean(location.pathname === '/')} />
 			<Grid container>
 				<Grid item xs={12}>
 					<div className={classes.pageContainer}>
