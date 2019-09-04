@@ -9,7 +9,6 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = theme => ({
   contentFrame: {
-    padding: '40px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -19,12 +18,27 @@ const styles = theme => ({
 	fontWeight: 100,
 	color: '#fff',
 	lineHeight: '24px',
-    transition: 'opacity .5s ease-in-out',	
+	transition: 'opacity .5s ease-in-out',
+	overflow: 'auto',
+	maxHeight: 'calc(100vh - 100px)',
+	maxWidth: '90%',
+    margin: '0 auto',
 	
 	[theme.breakpoints.up('sm')]: {
+		top: 'auto',
+		left: 'auto',
+		maxHeight: 'none',
 		padding: 0,
 		width: '30%',
-		margin: '0 auto'
+	},
+
+	[theme.breakpoints.up('md')]: {
+		width: '60%',
+		margin: '140px auto'
+	},
+
+	[theme.breakpoints.up('lg')]: {
+		width: '35%'
 	},
 
 	'.body--menu-open &': {

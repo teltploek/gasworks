@@ -8,10 +8,12 @@ const styles = theme => ({
   '@global': {
     body: {
       background: `${theme.palette.common.white} !important`,
-      fontFamily: theme.typography.fontFamily,
+	  fontFamily: theme.typography.fontFamily,
+	  fontSize: '1.1em'
     }
   },
   pageContainer: {
+	  position: 'relative',
     padding: 0,
     background: 'transparent',
     paddingBottom: '80px',

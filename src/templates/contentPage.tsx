@@ -15,7 +15,7 @@ const styles = theme => ({
     },
     h3: {
       marginTop: '40px',
-      fontSize: '16px',
+      fontSize: '1em',
       fontWeight: 400,
       fontFamily: theme.typography.fontFamily,
 

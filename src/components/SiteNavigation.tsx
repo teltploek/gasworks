@@ -39,7 +39,13 @@ const styles = theme => ({
 	},
 	
 	[theme.breakpoints.up('md')]: {
-		padding: '100px 80px 80px 80px',
+		flexDirection: 'column',
+		padding: '100px'
+	},
+
+	[theme.breakpoints.up('lg')]: {
+		flexDirection: 'row',
+		padding: '100px 80px 80px 80px'
 	}
   },
   
@@ -77,7 +83,11 @@ const styles = theme => ({
       top: 0,
       bottom: 'auto',
       width: 'auto',
-    },
+	},
+	
+	[theme.breakpoints.up('md')]: {
+		padding: '80px'
+	}
   },
 
   navBody: {
@@ -89,6 +99,10 @@ const styles = theme => ({
 	},
 	
 	[theme.breakpoints.up('md')]: {
+		margin: '0 auto',
+	},
+
+	[theme.breakpoints.up('lg')]: {
 		margin: '0 auto 0 300px',
 	},
 
@@ -149,7 +163,7 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'flex',
       marginTop: 0,
-      fontSize: '18px',
+      fontSize: '1.2em',
       lineHeight: '30px',
     },
   },
@@ -162,7 +176,18 @@ const styles = theme => ({
       marginTop: 0,
 	  marginBottom: '50px',
 	  marginRight: '40px'
-    },
+	},
+	
+
+	[theme.breakpoints.up('md')]: {
+		margin: '0 auto'
+	},
+
+	[theme.breakpoints.up('lg')]: {
+		marginTop: 0,
+	  	marginBottom: '50px',
+	  	marginRight: '40px'
+	}
   },
 
   menuItemLink: {
@@ -171,11 +196,26 @@ const styles = theme => ({
     touchAction: 'manipulation',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+	justifyContent: 'center',
+	transition: 'transform .5s ease',
 
-    '&:visited, &:active, &:hover': {
+    '&:visited, &:hover': {
       color: 'inherit',
-    },
+	},
+	
+	'&:active': {
+		transform: 'translateY(10px) scale3d(.95,.95,.95)',
+		color: 'inherit',
+		marginBottom: '-4px'
+	},
+
+	[theme.breakpoints.up('md')]: {
+		width: '150px'
+	},
+
+	[theme.breakpoints.up('lg')]: {
+		width: 'auto'
+	}
   },
 
   appearItem: {
