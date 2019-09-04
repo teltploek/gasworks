@@ -8,12 +8,12 @@ const styles = theme => ({
   '@global': {
     body: {
       background: `${theme.palette.common.white} !important`,
-	  fontFamily: theme.typography.fontFamily,
-	  fontSize: '1.1em'
-    }
+      fontFamily: theme.typography.fontFamily,
+      fontSize: '1.1em',
+    },
   },
   pageContainer: {
-	  position: 'relative',
+    position: 'relative',
     padding: 0,
     background: 'transparent',
     paddingBottom: '80px',
@@ -21,56 +21,64 @@ const styles = theme => ({
 
     [theme.breakpoints.up('sm')]: {
       marginTop: '200px',
-	  height: 'auto',
-	  paddingBottom: 0
-	},
-	
-	[theme.breakpoints.up('md')]: {
-		marginTop: '300px',
-	},
+      height: 'auto',
+      paddingBottom: 0,
+    },
 
-	[theme.breakpoints.up('lg')]: {
-		marginTop: '200px'
-	}
+    [theme.breakpoints.up('md')]: {
+      marginTop: '300px',
+    },
+
+    [theme.breakpoints.up('lg')]: {
+      marginTop: '200px',
+    },
   },
 
-	wallpaperBg: {
-		position: 'fixed',
-		top: 0,
-		right: 0,
-		left: 0,
-		bottom: 0,
-		width: '100%',
-		height: '100%',
-		background: `url(${wallpaper})`,
-		backgroundPosition: 'center center',
-		backgroundSize: 'cover',
-		filter: 'grayscale(100%) contrast(50%) brightness(40%)',
-		zIndex: 1
-	},
+  wallpaperBg: {
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    width: '100%',
+    height: '100%',
+    background: `url(${wallpaper})`,
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    filter: 'grayscale(100%) contrast(50%) brightness(40%)',
+    zIndex: 1,
+  },
 
-	content: {
-		position: 'relative',
-		zIndex: 2
-	}
+  content: {
+    position: 'relative',
+    zIndex: 2,
+  },
 })
 
 const Layout = ({ children, classes }) => (
-	<React.Fragment>
-		{Boolean(typeof location !== 'undefined') && Boolean(location) && Boolean(location.pathname === '/') && (
-			<div className={classes.wallpaperBg} />
-		)}
-		<div className={classes.content}>
-			<SiteNavigation bright={Boolean(typeof location !== 'undefined') && Boolean(location) && Boolean(location.pathname === '/')} />
-			<Grid container>
-				<Grid item xs={12}>
-					<div className={classes.pageContainer}>
-						<main>{children}</main>
-					</div>
-				</Grid>
-			</Grid>
-		</div>
-	</React.Fragment>
+  <React.Fragment>
+    {Boolean(typeof location !== 'undefined') &&
+      Boolean(location) &&
+      Boolean(location.pathname === '/') && (
+        <div className={classes.wallpaperBg} />
+      )}
+    <div className={classes.content}>
+      <SiteNavigation
+        bright={
+          Boolean(typeof location !== 'undefined') &&
+          Boolean(location) &&
+          Boolean(location.pathname === '/')
+        }
+      />
+      <Grid container>
+        <Grid item xs={12}>
+          <div className={classes.pageContainer}>
+            <main>{children}</main>
+          </div>
+        </Grid>
+      </Grid>
+    </div>
+  </React.Fragment>
 )
 
 export default withStyles(styles)(Layout)

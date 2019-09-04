@@ -8,6 +8,20 @@ import { withStyles } from '@material-ui/core/styles'
 
 
 const styles = theme => ({
+	contentFrameWrapper: {
+		maxHeight: '485px',
+		transition: 'opacity .5s ease-in-out',
+		maxWidth: '90%',
+		margin: '40px auto 100px auto',
+		overflowY: 'scroll',
+		overflowX: 'hidden',
+		'-webkit-overflow-scrolling': 'touch',
+
+		[theme.breakpoints.up('sm')]: {
+			margin: '0 auto',
+			maxHeight: 'none'
+		}
+	},
   contentFrame: {
     display: 'flex',
     flexDirection: 'column',
@@ -18,12 +32,7 @@ const styles = theme => ({
 	fontWeight: 100,
 	color: '#fff',
 	lineHeight: '24px',
-	transition: 'opacity .5s ease-in-out',
-	overflow: 'auto',
-	maxHeight: 'calc(100vh - 100px)',
-	maxWidth: '90%',
-    margin: '0 auto',
-	
+
 	[theme.breakpoints.up('sm')]: {
 		top: 'auto',
 		left: 'auto',
@@ -34,7 +43,7 @@ const styles = theme => ({
 
 	[theme.breakpoints.up('md')]: {
 		width: '60%',
-		margin: '140px auto'
+		margin: '0 auto'
 	},
 
 	[theme.breakpoints.up('lg')]: {
@@ -72,7 +81,7 @@ const IndexPage = ({ classes }) => (
       keywords={[`kontorfællesskab`, `egen plads`, `eget skrivebord`]}
     />
 
-
+	<div className={classes.contentFrameWrapper}>
     <div className={classes.contentFrame}>
     	<PageTitle title="Velkommen til Gasworks" />
 
@@ -106,6 +115,7 @@ const IndexPage = ({ classes }) => (
 		<p>Du kan også læse mere på vores <Link className={classes.link} to={`faq`}>FAQ</Link> for mere info eller kom forbi til ☕️
       </p>
     </div>
+	</div>
   </Layout>
 )
 
