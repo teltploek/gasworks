@@ -23,7 +23,15 @@ const styles = theme => ({
       marginTop: '200px',
 	  height: 'auto',
 	  paddingBottom: 0
-    },
+	},
+	
+	[theme.breakpoints.up('md')]: {
+		marginTop: '300px',
+	},
+
+	[theme.breakpoints.up('lg')]: {
+		marginTop: '200px'
+	}
   },
 
 	wallpaperBg: {
