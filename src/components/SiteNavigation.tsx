@@ -520,7 +520,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
               <ul className={this.props.classes.horizontalMenu}>
                 <li>
                   <Burger
-                    onClick={this.ResetMenu}
+                    onClick={this.Toggle}
                     isOpen={this.state.isOpen}
 					navToToggle="mainMenu" 
 					bright={this.props.bright}
@@ -595,11 +595,6 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                         Kontakt
                       </Link>
                     </li>
-                    {/* <li className={`${this.props.classes.menuItem} ${this.props.classes.appearItem}`}>
-											<Link className={this.props.classes.menuItemLink} to={`/`} tabIndex={!this.state.isOpen ? -1 : undefined}>
-												Residents
-											</Link>
-										</li> */}
                   </ul>
                 </Grid>
               </Grid>
