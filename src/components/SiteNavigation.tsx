@@ -279,7 +279,16 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
       isOpen: false,
     }
 
-    this.Toggle = this.Toggle.bind(this)
+	this.Toggle = this.Toggle.bind(this)
+	this.ResetMenu = this.ResetMenu.bind(this)
+  }
+
+  public ResetMenu() {
+	const bodyElm: HTMLBodyElement | null = document.querySelector('body');
+
+	if (bodyElm) {
+		bodyElm.classList.remove('body--menu-open');
+	}
   }
 
   public Toggle() {
@@ -511,7 +520,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
               <ul className={this.props.classes.horizontalMenu}>
                 <li>
                   <Burger
-                    onClick={this.Toggle}
+                    onClick={this.ResetMenu}
                     isOpen={this.state.isOpen}
 					navToToggle="mainMenu" 
 					bright={this.props.bright}
@@ -536,7 +545,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
-					  	onClick={this.Toggle}
+					  	onClick={this.ResetMenu}
                         className={this.props.classes.menuItemLink}
                         to={`/adresse`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
@@ -550,7 +559,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
-					  	onClick={this.Toggle}
+					  	onClick={this.ResetMenu}
                         className={this.props.classes.menuItemLink}
                         to={`/billeder`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
@@ -564,7 +573,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
-					  	onClick={this.Toggle}
+					  	onClick={this.ResetMenu}
                         className={this.props.classes.menuItemLink}
                         to={`/faq`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
@@ -578,7 +587,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
-					  	onClick={this.Toggle}
+					  	onClick={this.ResetMenu}
                         className={this.props.classes.menuItemLink}
                         to={`/kontakt`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
