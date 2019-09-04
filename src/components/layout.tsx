@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import SiteNavigation from './SiteNavigation'
 import { withStyles } from '@material-ui/core/styles'
+import wallpaper from '../images/office/new-office-01.jpg'
 
 const styles = theme => ({
   '@global': {
@@ -13,7 +14,7 @@ const styles = theme => ({
   pageContainer: {
     padding: 0,
     background: 'transparent',
-    paddingBottom: '100px',
+    paddingBottom: '80px',
     margin: 0,
 
     [theme.breakpoints.up('sm')]: {
@@ -22,24 +23,44 @@ const styles = theme => ({
 	  paddingBottom: 0
     },
   },
+
+	wallpaperBg: {
+		position: 'fixed',
+		top: 0,
+		right: 0,
+		left: 0,
+		bottom: 0,
+		width: '100%',
+		height: '100%',
+		background: `url(${wallpaper})`,
+		backgroundPosition: 'center center',
+		backgroundSize: 'cover',
+		filter: 'grayscale(100%) contrast(50%) brightness(40%)',
+		zIndex: 1
+	},
+
+	content: {
+		position: 'relative',
+		zIndex: 2
+	}
 })
 
-class Layout extends React.Component {
-  render() {
-    const { children, classes } = this.props
-    return (
-      <div>
-        <SiteNavigation />
-        <Grid container>
-          <Grid item xs={12}>
-            <div className={classes.pageContainer}>
-              <main>{children}</main>
-            </div>
-          </Grid>
-        </Grid>
-      </div>
-    )
-  }
-}
+const Layout = ({ children, classes }) => (
+	<React.Fragment>
+		{Boolean(location) && Boolean(location.pathname === '/') && (
+			<div className={classes.wallpaperBg} />
+		)}
+		<div className={classes.content}>
+			<SiteNavigation bright={Boolean(location) && Boolean(location.pathname === '/')} />
+			<Grid container>
+				<Grid item xs={12}>
+					<div className={classes.pageContainer}>
+						<main>{children}</main>
+					</div>
+				</Grid>
+			</Grid>
+		</div>
+	</React.Fragment>
+)
 
 export default withStyles(styles)(Layout)

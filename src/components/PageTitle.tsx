@@ -6,7 +6,10 @@ const styles = theme => ({
 		fontFamily: theme.typography.fontFamily,
 		fontSize: '40px',
 		fontWeight: 400,
-		textAlign: 'center'
+		textAlign: 'center',
+		color: 'inherit',
+		lineHeight: '60px',
+		marginBottom: '20px'
 	}
 });
 

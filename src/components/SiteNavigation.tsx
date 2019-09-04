@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles'
 //import LunrSearch from './LunrSearch';
 
 export interface ISiteNavigationProps {
+	bright?: boolean
   classes: any
 }
 
@@ -51,6 +52,12 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       overflow: 'auto',
     },
+  },
+
+  bright: {
+	  color: '#fff',
+	  background: 'transparent',
+	boxShadow: 'none'
   },
 
   navHead: {
@@ -129,7 +136,7 @@ const styles = theme => ({
     fontFamily: theme.typography.fontPrimary,
     fontSize: '24px',
     lineHeight: '36px',
-    color: theme.palette.common.black,
+    color: 'inherit',
     fontWeight: 300,
     fontStyle: 'normal',
     margin: {
@@ -276,15 +283,39 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
   }
 
   public Toggle() {
+
     this.setState({
       isOpen: !this.state.isOpen,
-    })
+    }, () => {
+		/*
+		* Admittedly, this is a bit dirty, so here's an explanaition:
+		* We need to decorate our surroundings when the header is open.
+		* Specifically we want to disable scroll behind the header when it's open.
+		* Normally we would dispatch an action an reflect it in the state of the entire app
+		* but as of now the arcitecture regarding this approach is uncertain and therefore we
+		* will allow this component to reach out into its outer surroundings and decorate the body-tag
+		* when the header is open.
+		*/
+		const bodyElm: HTMLBodyElement | null = document.querySelector('body');
+
+		if (bodyElm) {
+			if (this.state.isOpen === true) {
+				bodyElm.classList.add('body--menu-open');
+			} else {
+				bodyElm.classList.remove('body--menu-open');
+			}
+		}
+	});
   }
 
   public render() {
     const navClassName = classNames(this.props.classes.root, {
+		[this.props.classes.bright]: this.props.bright,
       [this.props.classes.navIsOpen]: this.state.isOpen,
-    })
+	})
+	
+
+	const svgColor = this.props.bright ? '#ffffff' : '#000000';
 
     return (
       <React.Fragment>
@@ -315,7 +346,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       <g
                         id="Frame-Copy-3"
                         transform="translate(2.000000, 0.000000)"
-                        stroke="#000000"
+                        stroke={svgColor}
                         strokeLinecap="round"
                       >
                         <g
@@ -468,7 +499,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       <path
                         d="M16.38,257 C20.38,257 22.02,255.64 22.02,255.64 L22.02,249.72 L15.66,249.72 L15.66,245.24 L26.74,245.24 L26.74,257.96 C26.74,257.96 23.18,261.48 16.38,261.48 C8.18,261.48 1.66,255.28 1.66,247 C1.66,238.72 7.98,232.52 16.18,232.52 C23.06,232.52 26.54,236.72 26.54,236.72 L23.26,239.92 C23.26,239.92 20.94,237 16.18,237 C10.54,237 6.54,241.6 6.54,247 C6.54,252.4 10.74,257 16.38,257 Z M29.06,261 L39.94,233 L44.82,233 L55.7,261 L50.86,261 L48.3,254.36 L36.46,254.36 L33.9,261 L29.06,261 Z M42.38,239.04 L38.18,249.96 L46.58,249.96 L42.38,239.04 Z M72.9,253.68 C72.9,251.32 71.1,250.48 67.78,249.32 C63.66,247.88 59.02,245.64 59.02,240.44 C59.02,236.48 62.54,232.52 68.18,232.52 C74.02,232.52 77.3,236.96 77.3,236.96 L73.98,240.24 C73.98,240.24 71.66,237.08 68.18,237.08 C65.78,237.08 63.9,238.56 63.9,240.44 C63.9,242.88 66.1,243.64 69.94,245.08 C74.22,246.68 77.78,248.6 77.78,253.68 C77.78,258.76 73.3,261.48 68.02,261.48 C61.02,261.48 57.78,255.76 57.78,255.76 L61.38,252.72 C61.38,252.72 63.78,256.92 68.02,256.92 C70.42,256.92 72.9,255.96 72.9,253.68 Z M118.9,233 L107.86,261.96 L99.46,240.96 L90.94,261.96 L79.9,233 L85.34,233 L91.26,249.8 L97.62,233 L101.58,233 L107.82,249.8 L113.9,233 L118.9,233 Z M133.94,232.52 C142.1,232.52 148.1,238.72 148.1,247 C148.1,255.28 142.1,261.48 133.94,261.48 C125.78,261.48 119.78,255.28 119.78,247 C119.78,238.72 125.78,232.52 133.94,232.52 Z M133.94,256.92 C139.58,256.92 143.22,252.4 143.22,247 C143.22,241.6 139.58,237.08 133.94,237.08 C128.3,237.08 124.66,241.6 124.66,247 C124.66,252.4 128.3,256.92 133.94,256.92 Z M152.42,261 L152.42,233 L161.62,233 C167.18,233 170.9,236.6 170.9,241.72 C170.9,245.92 168.66,249.12 164.66,250.12 L171.66,261 L166.06,261 L159.42,250.44 L157.22,250.44 L157.22,261 L152.42,261 Z M161.02,245.88 C164.1,245.88 166.02,244.48 166.02,241.72 C166.02,238.96 164.1,237.56 161.02,237.56 L157.22,237.56 L157.22,245.88 L161.02,245.88 Z M180.54,233 L180.54,245.56 L190.54,233 L196.54,233 L185.58,246.76 L197.9,261 L191.54,261 L180.54,248.36 L180.54,261 L175.74,261 L175.74,233 L180.54,233 Z M214.86,253.68 C214.86,251.32 213.06,250.48 209.74,249.32 C205.62,247.88 200.98,245.64 200.98,240.44 C200.98,236.48 204.5,232.52 210.14,232.52 C215.98,232.52 219.26,236.96 219.26,236.96 L215.94,240.24 C215.94,240.24 213.62,237.08 210.14,237.08 C207.74,237.08 205.86,238.56 205.86,240.44 C205.86,242.88 208.06,243.64 211.9,245.08 C216.18,246.68 219.74,248.6 219.74,253.68 C219.74,258.76 215.26,261.48 209.98,261.48 C202.98,261.48 199.74,255.76 199.74,255.76 L203.34,252.72 C203.34,252.72 205.74,256.92 209.98,256.92 C212.38,256.92 214.86,255.96 214.86,253.68 Z"
                         id="GASWORKS"
-                        fill="#000000"
+                        fill={svgColor}
                       />
                     </g>
                   </g>
@@ -482,7 +513,8 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                   <Burger
                     onClick={this.Toggle}
                     isOpen={this.state.isOpen}
-                    navToToggle="mainMenu"
+					navToToggle="mainMenu" 
+					bright={this.props.bright}
                   />
                 </li>
               </ul>
@@ -504,6 +536,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
+					  	onClick={this.Toggle}
                         className={this.props.classes.menuItemLink}
                         to={`/adresse`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
@@ -517,6 +550,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
+					  	onClick={this.Toggle}
                         className={this.props.classes.menuItemLink}
                         to={`/billeder`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
@@ -530,6 +564,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
+					  	onClick={this.Toggle}
                         className={this.props.classes.menuItemLink}
                         to={`/faq`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}
@@ -543,6 +578,7 @@ class SiteNavigation<T extends ISiteNavigationProps> extends React.Component<
                       }`}
                     >
                       <Link
+					  	onClick={this.Toggle}
                         className={this.props.classes.menuItemLink}
                         to={`/kontakt`}
                         tabIndex={!this.state.isOpen ? -1 : undefined}

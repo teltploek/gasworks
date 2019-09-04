@@ -47,7 +47,7 @@ const DirectionsPage = ({ classes }) => (
         itemType="http://schema.org/PostalAddress"
       >
         <p itemProp="streetAddress" className={classes.addressLine}>
-          Gasværksvej 8D, 1. tv
+          Gasværksvej 8D, 4. tv
         </p>
         <span itemProp="postalCode">1656</span>{' '}
         <span itemProp="addressLocality">København V</span>

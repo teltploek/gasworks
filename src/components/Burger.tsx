@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
 	root: {
-		background: 0,
+		background: 'transparent',
 		border: 0,
 		display: 'flex',
 		padding: 0,
@@ -20,6 +20,10 @@ const styles = theme => ({
 			width: '90px',
 			justifyContent: 'start'
 		}
+	},
+
+	rootBright: {
+		color: 'inherit'
 	},
 
 	BurgerIcon: {
@@ -49,7 +53,11 @@ const styles = theme => ({
 		opacity: 1,
 		left: 0,
 		transform: 'rotate(0deg)',
-		transition: '.25s ease-in-out'
+		transition: '.25s ease-in-out',
+
+		'$rootBright &': {
+			background: '#fff'
+		}
 	},
 
 	BurgerIconBar1: {
@@ -93,7 +101,11 @@ const styles = theme => ({
 		color: theme.palette.common.black,
 		fontFamily: theme.typography.fontFamily,
 		fontSize: '9px',
-		lineHeight: 'normal'
+		lineHeight: 'normal',
+
+		'$rootBright &': {
+			color: '#fff'
+		}
 	},
 
 	isOpen: {
@@ -105,26 +117,28 @@ export interface IBurgerMenuButtonProps {
 	classes: any;
 	onClick: any;
 	navToToggle: string;
+	bright?: boolean;
 	isOpen?: boolean;
 }
 
 const BrugerMenuButton: React.SFC<IBurgerMenuButtonProps> = props => {
-	const { isOpen, classes, navToToggle, ...rest } = props;
+	const { isOpen, classes, navToToggle, bright, onClick } = props;
 
-	const className = classNames(props.classes.root, {
-		[props.classes.isOpen]: props.isOpen
+	const className = classNames(classes.root, {
+		[classes.isOpen]: isOpen,
+		[classes.rootBright]: bright
 	});
 
 	const accessibilityValues = {
-		isExpanded: props.isOpen
+		isExpanded: isOpen
 	};
 
 	return (
 		<button
 			aria-expanded={accessibilityValues.isExpanded}
-			aria-controls={props.navToToggle}
+			aria-controls={navToToggle}
 			className={className}
-			onClick={props.onClick}
+			onClick={onClick}
 		>
 			<div className={classes.BurgerIcon}>
 				<span
@@ -150,7 +164,7 @@ const BrugerMenuButton: React.SFC<IBurgerMenuButtonProps> = props => {
 			</div>
 
 			<div className={classes.BurgerCaption}>
-				{props.isOpen ? 'GO BACK' : 'MENU'}
+				{isOpen ? 'LUK MENU' : 'MENU'}
 			</div>
 		</button>
 	);
