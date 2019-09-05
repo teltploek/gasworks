@@ -5,6 +5,10 @@ description: "Ofte stillede spørgsmål"
 
 <div class="content-wrapper">
 
+### Hvad koster en plads?
+
+Prisen for en fast plads er 2.900 kr om måneden (ekskl. moms, da den slags opkræves uden moms).
+
 ### Får jeg egen nøgle?
 
 Ja, alle lejere har egen nøgle og kan komme og gå som de vil.

@@ -104,7 +104,7 @@ const IndexPage = ({ classes }) => (
 	  <br />
 
 	  <p>
-	  	Med i den faste leje hos Gasworks hører egen nøgle til kontoret med alle typer offentlig transport i nærheden, kaffe, the og internet ad libitum, professionel rengøring og en herlig faglig atmosfære vedligeholdt af rare mennesker.
+	  	Med i den faste leje hos Gasworks hører en fast skrivebordsplads, egen nøgle til kontoret - med alle typer offentlig transport i nærheden - kaffe, the og internet ad libitum, professionel rengøring og en herlig faglig atmosfære vedligeholdt af rare mennesker.
 	  </p>
 
       {/* <div className={classes.videoWrapper}>
