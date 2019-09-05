@@ -54,6 +54,9 @@ const styles = theme => ({
 		opacity: 0
 	}
   },
+  noSpacing: {
+	  marginBottom: 0
+  },
   largeText: {
 	fontSize: '24px',
 	marginBottom: '10px'
@@ -85,10 +88,14 @@ const IndexPage = ({ classes }) => (
     <div className={classes.contentFrame}>
     	<PageTitle title="Velkommen til Gasworks" />
 
-      <p>
-        Din egen plads i kontorfællesskab til en overkommelig pris i ❤️af
+      <p className={classes.noSpacing}>
+        Din egen plads i kontorfællesskab i ❤️af
         København
       </p>
+
+	  <p className={classes.largeText}>
+		  2.900 DKK / måned
+	  </p>
 
 	  <p className={classes.largeText}>
 		  <strong>Vi har ledige pladser!</strong>
@@ -97,7 +104,7 @@ const IndexPage = ({ classes }) => (
 	  <br />
 
 	  <p>
-	  	Med i lejen hos Gasworks hører egen nøgle til kontoret med alle typer offentlig transport i nærheden, kaffe, the og internet ad libitum, professionel rengøring og en herlig faglig atmosfære vedligeholdt af rare mennesker.
+	  	Med i den faste leje hos Gasworks hører egen nøgle til kontoret med alle typer offentlig transport i nærheden, kaffe, the og internet ad libitum, professionel rengøring og en herlig faglig atmosfære vedligeholdt af rare mennesker.
 	  </p>
 
       {/* <div className={classes.videoWrapper}>
